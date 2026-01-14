@@ -138,6 +138,10 @@ nav ul li a:hover {
 
 .form input:invalid,
 .form textarea:invalid {
+   border-color: #ef4444;
+}
+
+.block-error {
     background: #c23939;
     width: 96%;
     padding: 10px 2%;
@@ -148,3 +152,52 @@ nav ul li a:hover {
     color: #e8e8e8;
     font-size: 17px;
 }
+
+.post {
+    background: #262626;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    padding: 20px;
+    margin-bottom: 20px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.post:hover {
+     transform: translateY(-3px);
+     box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
+}
+
+.post h2 {
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+    color: #dcb516;
+}
+
+.post p {
+    font-size: 1rem;
+    color: #b8b8b8;
+    line-height: 1.6;
+}
+
+.post a {
+    background: #dcb516;
+    color: #fff;
+    padding: 10px 12px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: all 500ms ease;
+}
+
+.post a:hover {
+    background-color: #8b710b;
+}
+
+footer {
+    border-top: 2px solid #000;
+    background-color: #2b2b2b;
+    text-align: center;
+    padding: 35px;
+    font-size: 14px;
+    color: #aaaaaa;
+}
+

@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Http\Requests\ContactRequest;
+use App\Models\Message;
 
 class BasicController extends Controller
 {
@@ -21,13 +23,17 @@ class BasicController extends Controller
      return view("static.contact");
    }
 
-   public function submit(Request $request)
+   public function submit(ContactRequest $request)
    {
-    $request->validate([
-        "name" => "required|min:2|max:50",
-        "email" => ["required", "min:5", "max:100"],
-        "subject" => "required",
-        "message" => "required"
-    ]);
+    // $request->validate();
+
+    $message = new Message();
+    $message->name = $request->input("name");
+    $message->email = $request->input("email");
+    $message->subject = $request->input("subject");
+    $message->text = $request->input("message");
+    $message->save();
+
+    return redirect()->route("home");
    }
 }
