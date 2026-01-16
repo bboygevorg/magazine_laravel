@@ -16,6 +16,7 @@ Route::post('/contact', [BasicController::class, "submit"])->name("contact.post"
 Route::get('/posts', [PostController::class, "index"])->name("posts");  // псевдонимы
 Route::get('/posts/{id}', [PostController::class, "show"])->name("posts.one");  // псевдонимы
 Route::get('/posts/{id}/edit', [PostController::class, "edit"])->name("posts.one.edit");  // псевдонимы
+Route::get('/posts/{id}/delete', [PostController::class, "delete"])->name("posts.one.delete");  // псевдонимы
 Route::post('/posts/{id}/edit', [PostController::class, "update"])->name("posts.edit");  // псевдонимы
 
 // Route::post('/contact', function () {
